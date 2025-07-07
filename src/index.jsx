@@ -36,12 +36,17 @@ import DecodePageRoute from './decode-page-route';
 import { DECODE_ROUTES, ROUTES } from './constants';
 import PreferencesUnsubscribe from './preferences-unsubscribe';
 import PageNotFound from './generic/PageNotFound';
+import { ContextAppProvider } from './context';
+import TanancyWrapper from './tanancyWrapper';
 
 subscribe(APP_READY, () => {
   const root = createRoot(document.getElementById('root'));
 
   root.render(
     <StrictMode>
+      <ContextAppProvider>
+        <TanancyWrapper>
+
       <AppProvider store={store}>
         <Helmet>
           <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
@@ -149,6 +154,9 @@ subscribe(APP_READY, () => {
           </NoticesProvider>
         </PathFixesProvider>
       </AppProvider>
+        </TanancyWrapper>
+
+      </ContextAppProvider>
     </StrictMode>,
   );
 });
