@@ -542,9 +542,9 @@ body.theme-persistent.paragon-theme-loaded,
 .btn-tertiary{
   color: black !important;
 }
-.menu-trigger{
-  color: var(--active-bg) !important;
-}
+// .menu-trigger{
+//   color: var(--active-bg) !important;
+// }
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
