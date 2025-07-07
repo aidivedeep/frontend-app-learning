@@ -444,6 +444,105 @@
   height: 56px !important;
 }
 
+
+
+.nav-tabs .nav-item .nav-link,
+.nav-tabs .nav-item .nav-link:focus,
+.nav-tabs .nav-item .nav-link:active,
+.nav-tabs .nav-item .nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+
+
+.nav-tabs .nav-link.active .nav-item:active {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 2px solid var(--links-color) !important; 
+  background-color: transparent !important;
+  transition: none !important;
+  transform: none !important;
+}
+.nav-tabs .nav-link.active:hover {
+  border-bottom: 2px solid var(--links-color) !important;
+}
+
+.nav-link:hover{
+  // background-color: var(--links-color-hover) !important; 
+  border-bottom: 2px solid var(--links-color) !important;
+}
+.active{
+  border-bottom: 2px solid var(--links-color) !important;
+
+}
+
+
+  
+  .btn,
+  .btn:focus,
+  .btn:active,
+  .btn.active,
+  .btn-outline-primary.active,
+  .btn-outline-primary:focus,
+  .btn-outline-primary:active {
+    background-color: var(--active-hover-bg) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important; 
+    border-radius: 0.375rem !important;
+  }
+  
+
+  .bgnone {
+    background-color: transparent !important;
+    color: black !important;
+  }
+
+
+// Additional defensive rules to prevent overrides
+[data-theme-persistent] {
+  --active-bg: var(--active-bg) !important;
+  --active-hover-bg: var(--active-hover-bg) !important;
+  --hover-bg: var(--hover-bg) !important;
+  --links-color: var(--links-color) !important;
+  --links-color-hover: var(--links-color-hover) !important;
+}
+
+// Force re-application of variables after Paragon loads
+.pgn-loaded,
+body.paragon-theme-loaded {
+  --active-bg: var(--active-bg) !important;
+  --active-hover-bg: var(--active-hover-bg) !important;
+  --hover-bg: var(--hover-bg) !important;
+  --links-color: var(--links-color) !important;
+  --links-color-hover: var(--links-color-hover) !important;
+}
+
+body.theme-persistent.paragon-theme-loaded,
+.pgn-loaded.theme-persistent {
+  --active-bg: var(--active-bg) !important;
+  --active-hover-bg: var(--active-hover-bg) !important;
+  --hover-bg: var(--hover-bg) !important;
+  --links-color: var(--links-color) !important;
+  --links-color-hover: var(--links-color-hover) !important;
+}
+
+.btn-tertiary{
+  color: black !important;
+}
+.menu-trigger{
+  color: var(--active-bg) !important;
+}
+
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";

@@ -38,6 +38,8 @@ import PreferencesUnsubscribe from './preferences-unsubscribe';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
+<ContextAppProvider>
+  <TanancyWrapper>
     <AppProvider store={initializeStore()}>
       <Helmet>
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
@@ -136,7 +138,10 @@ subscribe(APP_READY, () => {
           </UserMessagesProvider>
         </NoticesProvider>
       </PathFixesProvider>
-    </AppProvider>,
+    </AppProvider>
+    </TanancyWrapper>
+  </ContextAppProvider>
+    ,
     document.getElementById('root'),
   );
 });
