@@ -35,6 +35,8 @@ import CourseAccessErrorPage from './generic/CourseAccessErrorPage';
 import DecodePageRoute from './decode-page-route';
 import { DECODE_ROUTES, ROUTES } from './constants';
 import PreferencesUnsubscribe from './preferences-unsubscribe';
+import { ContextAppProvider } from './context';
+import TanancyWrapper from './tanancyWrapper';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
