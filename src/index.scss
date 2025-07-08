@@ -558,6 +558,19 @@ body.theme-persistent.paragon-theme-loaded,
   color: var(--active-bg) !important;
 
 }
+
+.theme-toggle-button .dark-theme-icon>span{
+  color: var(--active-bg) !important;
+}
+
+.next-button{
+  color: white !important;
+
+}
+
+.theme-toggle-button .toggle-switch .switch .slider {
+  color: var(--active-bg) !important;
+}
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
