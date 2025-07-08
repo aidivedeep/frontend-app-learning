@@ -543,6 +543,21 @@ body.theme-persistent.paragon-theme-loaded,
   color: var(--active-bg) !important;
 }
 
+.outline-sidebar-heading{
+  background: none !important;
+}
+.outline-sidebar-heading:active{
+  background: none !important;
+}
+
+.btn-link{
+  background: none !important;
+
+}
+.btn-outline-primary{
+  color: var(--active-bg) !important;
+
+}
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
